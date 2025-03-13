@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+        $this->call(CourseSeeder::class); // Ajoute le seeder des cours ici
         // Create 5 teachers with profiles
         $teachers = User::factory()
             ->count(5)
