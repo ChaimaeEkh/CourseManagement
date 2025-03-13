@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
         foreach ($teachers as $teacher) {
             $teacherCourses = Course::factory()
                 ->count(3)
+                ->published()
                 ->create([
                     'teacher_id' => $teacher->id
                 ]);
